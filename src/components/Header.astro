@@ -24,7 +24,18 @@ const { activeNav } = Astro.props;
               height={LOGO_IMAGE.height}
             />
           ) : (
-            SITE.title
+            <div class="flex items-center gap-2">
+              <img
+              src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
+                alt={SITE.title}
+                width={LOGO_IMAGE.width}
+                height={LOGO_IMAGE.height}
+              />
+              <div>
+                <h1 class="">{SITE.title}</h1>
+                <p class="text-xl">{SITE.subtitle}</p>  
+              </div>
+            </div>
           )
         }
       </a>
